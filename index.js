@@ -6,6 +6,8 @@ const cart = require("./routes/cartRoutes");
 const order = require("./routes/orderRoutes");
 const app = express();
 app.use(express.json());
+app.use(cors());
+
 
 mongoose.connect("mongodb://localhost:27017/e-commerce")
     .then(() => console.log("MongoDB connected"))
